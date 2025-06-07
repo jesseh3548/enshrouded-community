@@ -151,7 +151,7 @@ touch /home/steam/enshrouded/StartEnshroudedServer.sh
 #write the startupscript
 cat << EOF >> /home/steam/enshrouded/StartEnshroudedServer.sh
 #!/bin/sh
-export WINEARCH=win64
+export WINEARCH=wine64
 #export WINEPREFIX=/home/steam/.enshrouded_prefix
 #export WINEDEBUG=-all
 wine64 /home/steam/enshrouded/enshrouded_server.exe
