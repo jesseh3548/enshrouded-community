@@ -151,7 +151,7 @@ touch /home/steam/enshrouded/StartEnshroudedServer.sh
 #write the startupscript
 cat << EOF >> /home/steam/enshrouded/StartEnshroudedServer.sh
 #!/bin/sh
-export WINEARCH=wine64
+export WINEARCH=win64
 #export WINEPREFIX=/home/steam/.enshrouded_prefix
 #export WINEDEBUG=-all
 wine64 /home/steam/enshrouded/enshrouded_server.exe
@@ -164,7 +164,7 @@ chmod +x /home/steam/enshrouded/StartEnshroudedServer.sh
 chown -R steam:steam /home/steam/
 
 #install server
-sudo su steam -c "/home/steam/steamcmd +@sSteamCmdForcePlatformType windows +force_install_dir /home/steam/enshrouded +login anonymous +app_update 2278520 +quit"
+su steam -c "/home/steam/steamcmd +@sSteamCmdForcePlatformType windows +force_install_dir /home/steam/enshrouded +login anonymous +app_update 2278520 +quit"
 
 ##########################
 # Create service section #
